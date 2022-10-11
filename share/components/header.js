@@ -42,21 +42,22 @@ const Header = () => {
             <a className="nav-link">Users</a>
           </Link>
         </li>
-        {
-           (auth.isLoggedIn === false) ?
+       
         <li className="nav-item">
           <Link href="/login">
             <a className="nav-link">Login</a>
           </Link>
         </li>
-        :
+        {
+           (auth.isLoggedIn === true) ?
         <li
           className="nav-item"
           style={{ cursor: "pointer" }}
           onClick={handleLogout}
         >
-          <a className="nav-link">Logout</a>
+          <a className="nav-link">Logout</a> 
         </li>
+        : <></>
 }
       </ul>
     </nav>
